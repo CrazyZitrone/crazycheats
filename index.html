@@ -6,23 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crazy Cheats | Home Site</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/ico/DiscordServer.ico">
+    <link rel="icon" href="ico/DiscordServer.ico">
 </head>
 <body>
-    <nav class="nav">
-        <div class="container">
+    <nav class="navbar">
+        <div class="box">
             <div class="logo">
-                <a href="#">Your Logo</a>
+                <a href="#">Crazy Cheats</a>
             </div>
-            <div id="mainListDiv" class="main_list">
+            <div id="navbarList" class="navbar_list">
                 <ul class="navlinks">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Dashboard</a></li>
                 </ul>
             </div>
-            <span class="navTrigger">
+            <span class="navbarTrigger">
                 <i></i>
                 <i></i>
                 <i></i>
@@ -58,9 +57,9 @@
     <script>
         $(window).scroll(function() {
             if ($(document).scrollTop() > 50) {
-                $('.nav').addClass('affix');
+                $('.navbar').addClass('affix');
             } else {
-                $('.nav').removeClass('affix');
+                $('.navbar').removeClass('affix');
             }
         });
     </script>

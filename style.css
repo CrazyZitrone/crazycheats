@@ -11,6 +11,7 @@ body{
     padding: 0;
 }
 /* --Scrollbar-- */
+
 ::-webkit-scrollbar{
     width: 8px;
     background: none;
@@ -20,7 +21,8 @@ body{
     border-radius: 24px;
 }
 /* --Navbar-- */
-.nav {
+
+.navbar{
     width: 100%;
     height: 65px;
     position: fixed;
@@ -28,29 +30,29 @@ body{
     text-align: center;
 }
 
-.nav div.logo {
+.navbar .box .logo{
     float: left;
     width: auto;
     height: auto;
     padding-left: 3rem;
 }
 
-.nav div.logo a {
+.navbar .box .logo a{
     text-decoration: none;
-    color: #fff;
+    color: var(--font-color);
     font-size: 2.5rem;
 }
 
-.nav div.logo a:hover {
-    color: #00E676;
+.navbar .box .logo a:hover{
+    color: var(--color);
 }
 
-.nav div.main_list {
+.navbar .box .navbar_list{
     height: 65px;
     float: right;
 }
 
-.nav div.main_list ul {
+.navbar .box .navbar_list ul{
     width: 100%;
     height: 65px;
     display: flex;
@@ -59,28 +61,27 @@ body{
     padding: 0;
 }
 
-.nav div.main_list ul li {
+.navbar .box .navbar_list ul li{
     width: auto;
     height: 65px;
     padding: 0;
     padding-right: 3rem;
 }
 
-.nav div.main_list ul li a {
+.navbar .box .navbar_list ul li a{
     text-decoration: none;
-    color: #fff;
+    color: var(--font-color);
     line-height: 65px;
-    font-size: 2.4rem;
+    font-size: 1.4rem;
 }
 
-.nav div.main_list ul li a:hover {
-    color: #00E676;
+.navbar .box .navbar_list ul li a:hover{
+    color: var(--color);
 }
 
+/* --Home-section-- */
 
-/* Home section */
-
-.home {
+.home{
     width: 100%;
     height: 100vh;
     background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
@@ -88,11 +89,11 @@ body{
 	background-size:cover;
 }
 
-.navTrigger {
+.navbarTrigger{
     display: none;
 }
 
-.nav {
+.navbar{
     padding-top: 20px;
     padding-bottom: 20px;
     -webkit-transition: all 0.4s ease;
@@ -100,61 +101,60 @@ body{
 }
 
 
-/* Media qurey section */
+/* --Media-- */
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .container {
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .box{
         margin: 0;
     }
 }
 
-@media screen and (max-width:768px) {
-    .navTrigger {
+@media screen and (max-width:768px){
+    .navbarTrigger{
         display: block;
     }
-    .nav div.logo {
+    .navbar .box .logo{
         margin-left: 15px;
     }
-    .nav div.main_list {
+    .navbar .box .navbar_list{
         width: 100%;
         height: 0;
         overflow: hidden;
     }
-    .nav div.show_list {
+    .navbar .box .show_list{
         height: auto;
         display: none;
     }
-    .nav div.main_list ul {
+    .navbar .box .navbar_list ul{
+        float: right;
         flex-direction: column;
-        width: 100%;
-        height: 100vh;
+        width: 40%;
+        height: 35vh;
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: #111;
-        /*same background color of navbar*/
+        background-color: var(--navbar-background);
         background-position: center top;
     }
-    .nav div.main_list ul li {
+    .navbar .box .navbar_list ul li{
         width: 100%;
         text-align: right;
     }
-    .nav div.main_list ul li a {
+    .navbar .box .navbar_list ul li a{
         text-align: center;
         width: 100%;
-        font-size: 3rem;
+        font-size: 1.5rem;
         padding: 20px;
     }
-    .nav div.media_button {
+    .navbar .box .media_button{
         display: block;
     }
 }
 
 
-/* Animation */
-/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+/* --Navbar-Animation-- */
 
-.navTrigger {
+.navbarTrigger{
     cursor: pointer;
     width: 30px;
     height: 25px;
@@ -165,8 +165,8 @@ body{
     bottom: 0;
 }
 
-.navTrigger i {
-    background-color: #fff;
+.navbarTrigger i{
+    background-color: var(--font-color);
     border-radius: 2px;
     content: '';
     display: block;
@@ -174,14 +174,14 @@ body{
     height: 4px;
 }
 
-.navTrigger i:nth-child(1) {
+.navbarTrigger i:nth-child(1){
     -webkit-animation: outT 0.8s backwards;
     animation: outT 0.8s backwards;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
 }
 
-.navTrigger i:nth-child(2) {
+.navbarTrigger i:nth-child(2){
     margin: 5px 0;
     -webkit-animation: outM 0.8s backwards;
     animation: outM 0.8s backwards;
@@ -189,29 +189,29 @@ body{
     animation-direction: reverse;
 }
 
-.navTrigger i:nth-child(3) {
+.navbarTrigger i:nth-child(3){
     -webkit-animation: outBtm 0.8s backwards;
     animation: outBtm 0.8s backwards;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
 }
 
-.navTrigger.active i:nth-child(1) {
+.navbarTrigger.active i:nth-child(1){
     -webkit-animation: inT 0.8s forwards;
     animation: inT 0.8s forwards;
 }
 
-.navTrigger.active i:nth-child(2) {
+.navbarTrigger.active i:nth-child(2){
     -webkit-animation: inM 0.8s forwards;
     animation: inM 0.8s forwards;
 }
 
-.navTrigger.active i:nth-child(3) {
+.navbarTrigger.active i:nth-child(3){
     -webkit-animation: inBtm 0.8s forwards;
     animation: inBtm 0.8s forwards;
 }
 
-@-webkit-keyframes inM {
+@-webkit-keyframes inM{
     50% {
         -webkit-transform: rotate(0deg);
     }
@@ -220,7 +220,7 @@ body{
     }
 }
 
-@keyframes inM {
+@keyframes inM{
     50% {
         transform: rotate(0deg);
     }
@@ -229,7 +229,7 @@ body{
     }
 }
 
-@-webkit-keyframes outM {
+@-webkit-keyframes outM{
     50% {
         -webkit-transform: rotate(0deg);
     }
@@ -238,7 +238,7 @@ body{
     }
 }
 
-@keyframes outM {
+@keyframes outM{
     50% {
         transform: rotate(0deg);
     }
@@ -247,7 +247,7 @@ body{
     }
 }
 
-@-webkit-keyframes inT {
+@-webkit-keyframes inT{
     0% {
         -webkit-transform: translateY(0px) rotate(0deg);
     }
@@ -259,7 +259,7 @@ body{
     }
 }
 
-@keyframes inT {
+@keyframes inT{
     0% {
         transform: translateY(0px) rotate(0deg);
     }
@@ -271,7 +271,7 @@ body{
     }
 }
 
-@-webkit-keyframes outT {
+@-webkit-keyframes outT{
     0% {
         -webkit-transform: translateY(0px) rotate(0deg);
     }
@@ -283,7 +283,7 @@ body{
     }
 }
 
-@keyframes outT {
+@keyframes outT{
     0% {
         transform: translateY(0px) rotate(0deg);
     }
@@ -295,7 +295,7 @@ body{
     }
 }
 
-@-webkit-keyframes inBtm {
+@-webkit-keyframes inBtm{
     0% {
         -webkit-transform: translateY(0px) rotate(0deg);
     }
@@ -307,7 +307,7 @@ body{
     }
 }
 
-@keyframes inBtm {
+@keyframes inBtm{
     0% {
         transform: translateY(0px) rotate(0deg);
     }
@@ -319,7 +319,7 @@ body{
     }
 }
 
-@-webkit-keyframes outBtm {
+@-webkit-keyframes outBtm{
     0% {
         -webkit-transform: translateY(0px) rotate(0deg);
     }
@@ -331,7 +331,7 @@ body{
     }
 }
 
-@keyframes outBtm {
+@keyframes outBtm{
     0% {
         transform: translateY(0px) rotate(0deg);
     }
@@ -343,9 +343,9 @@ body{
     }
 }
 
-.affix {
+.affix{
     padding: 0;
-    background-color: #111;
+    background-color: var(--navbar-background);
 }
 
 
@@ -353,18 +353,18 @@ body{
 
 
 
-.myH2 {
+.myH2{
 	text-align:center;
 	font-size: 4rem;
 }
-.myP {
+.myP{
 	text-align: justify;
 	padding-left:15%;
 	padding-right:15%;
 	font-size: 20px;
 }
 @media all and (max-width:700px){
-	.myP {
+	.myP{
 		padding:2%;
 	}
 }

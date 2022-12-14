@@ -1,7 +1,7 @@
-$('.navTrigger').click(function () {
+$('.navbarTrigger').click(function () {
     $(this).toggleClass('active');
     console.log("Clicked menu");
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
+    $("#navbarList").toggleClass("show_list");
+    $("#navbarList").fadeIn();
 
 });
