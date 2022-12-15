@@ -42,7 +42,7 @@ body{
 .navbar .box .logo a{
     text-decoration: none;
     color: var(--font-color);
-    font-size: 2.5rem;
+    font-size: 2.0rem;
 }
 
 .navbar .box .logo a:hover{
@@ -359,7 +359,7 @@ body{
     color: var(--color);
 }
 .myP{
-	text-align: justify;
+	text-align: center;
 	padding-left:15%;
 	padding-right:15%;
 	font-size: 20px;
@@ -369,45 +369,4 @@ body{
 	.myP{
 		padding:2%;
 	}
-}
-.home .error_page{
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    width: 300px;
-    transform: translate(-50%,-50%);
-    position: absolute;
-    border: 2px solid var(--font-error-color);
-    border-radius: 24px;
-    padding: 10px;
-    box-shadow: 5px 10px 18px var(--font-error-color);
-}
-.home .error_page h1{
-    color: var(--font-color);
-    font-size: 50px;
-}
-.home .error_page p{
-    color: var(--font-color);
-    font-size: 20px;
-}
-.home .error_page .material-symbols-outlined{
-    font-size: 150px;
-    color: var(--font-error-color);
-}
-.home .press_key a{
-    text-align: center;
-    top: 85%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    text-decoration: none;
-    color: var(--font-color);
-}
-.test{
-    position: absolute;
-    left: 50%;
-    text-align: center;
-    text-decoration: none;
-    transform: translate(var(--transform-translate));
-    color: var(--font-error-color);
 }
