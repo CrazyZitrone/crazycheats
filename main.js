@@ -1,7 +1,6 @@
 /* --Navbar-Click-menu-- */
 $('.navbarTrigger').click(function () {
     $(this).toggleClass('active');
-    console.log('click');
     $("#navbarList").toggleClass("show_list");
     $("#navbarList").fadeIn();
 
